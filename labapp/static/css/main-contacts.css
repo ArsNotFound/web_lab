@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+}
+.heading h2{
+    font-weight:bold;
+    font-size: 40px;
+    color: rgb(220, 139, 9);
+    margin-bottom: 0px;
+}
+.info{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+table{
+    width: 100%;
+    font-size: 25px;
+    color: rgb(111, 110, 110);
+}
+.vk{
+    width: 100px;
+}
+.images{
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);;
+}
+

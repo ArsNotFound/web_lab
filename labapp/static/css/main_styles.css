@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+}
+.heading h1{
+    font-weight:900;
+    font-size: 60px;
+    color: rgb(220, 139, 9);
+}
+.search-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-txt input{
+    width: 320px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+.check label{
+    font-size: 20px;
+    opacity: 0.7;
+}
+.img-block{
+    padding-top: 5%;
+}
+.img{
+    width: 370px;
+    border-radius: 20px;
+}
+.img:hover{
+    transform: scale(1.04);
+}
+.sidebar{
+    background-color: white;
+    margin-top: 50px;
+    width: 420px;
+    height: 580px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info{
+    margin-top: 10px;
+    background-color: rgb(220, 139, 9);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info a{
+    text-decoration: none;
+    color: white;
+}
+.info:hover{
+    transform: scale(1.04);
+}
+.subcribe{
+    width: 380px;
+}
+.follow{
+    background-color: rgb(220, 139, 9);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.follow a{
+    text-decoration: none;
+    color: white;
+}
+.follow:hover{
+    transform: scale(1.04);
+}
+.sidebars{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sidebar .subcribe p span{
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+footer{
+    margin-top: 60px;
+    width: 100%;
+    height: 110px;
+    background-image: url("/static/img/footer.png");
+    background-size: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3); 
+}
+.footer-site{
+    /* padding: 35px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+}
+.donate{
+    height: 60px;
+    width: 230px;
+    background-color: rgb(220, 139, 9);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.donate a{
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.donate:hover{
+    transform: scale(1.09);
+}
+.menu-logo{
+    width: 10%;
+    display: flex;
+    justify-content: space-around; 
+} 

@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main-neural.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content-sidebar">
+        <div class="content">
+            <div><img class="gif" src="{{ url_for('static', filename=network.img) }}" alt="{{ network.name }}"></div>
+            <div class="category"><a href="#">{{ network.category.name }}</a></div>
+            <div class="info"><p><span>Задача:</span> {{ network.tasks }}</p></div>
+            <div class="info"><p><span>Сфера:</span> {{ network.field }}</p></div>
+            <div class="info"><p><span>{{ network.name }}</span> — {{ network.desc }}</p></div>
+            <div class="follow"><a href="{{ network.url }}">Попробовать..</a></div>
+            <div class="share">
+                <div><p>Поделиться: </p></div>
+                <div>
+                    <a href="https://vk.com/">
+                        <img class="vk" src="{{ url_for('static', filename='img/vk.png') }}" alt="VK">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="heading"><h3>Какими нейросетями уже пользовались?</h3></div>
+            <div class="list">
+                <ul>
+                    {% for item in networks %}
+                        <li><label><input type="checkbox" name="{{ item.name }}">{{ item.name }}</label></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="send"><input type="submit" name="send" value="Отправить"></div>
+        </div>
+    </div>
+{% endblock %}

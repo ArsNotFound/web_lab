@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main-news.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        {% for item in news %}
+            <div><img class="image" src="{{ url_for('static', filename=item.img) }}" alt="{{ item.name }}"></div>
+            <h3 class="subtitle">{{ item.name }}</h3>
+            <div class="text-block">
+                <p>{{ item.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block foot %}
+    <script src="{{ url_for('static', filename='js/news.js') }}"></script>
+{% endblock %}

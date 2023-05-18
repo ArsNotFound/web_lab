@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+}
+main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content{
+    margin-left: 3%;
+    width: 50%;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+}
+.heading h2{
+    font-weight:bold;
+    font-size: 40px;
+    color: rgb(220, 139, 9);
+    margin-bottom: 0px;
+}
+.category{
+    margin-top: 10px;
+    background-color: rgb(220, 139, 9);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category a{
+    text-decoration: none;
+    color: white;
+}
+.category:hover{
+    transform: scale(1.09);
+}
+.info p{
+    font-size: 18px;
+}
+
+.info p span{
+    font-weight: bold;
+}
+.gif{
+    width: 700px;
+}
+.follow{
+    margin-top: 10px;
+    background-color: rgb(11, 179, 45);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.follow a{
+    text-decoration: none;
+    color: white;
+}
+.follow:hover{
+    transform: scale(1.09);
+}
+.vk{
+    width: 100px;
+}
+.vk:hover{
+    transform: scale(1.09);
+}
+.share{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+}
+.share p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.content-sidebar{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar{
+    float: left;
+    margin-left: 5%;
+    width: 40%;
+    height: 100%; 
+    border: 1px solid rgb(128, 127, 127);
+    background-image: url("D:\\My_files\\ТЗ по вебу\\Лаба 1\\www\\images\\lp-logo-3.jpg");
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.send input{
+    background-color:rgb(220, 139, 9);
+    border-radius: 20px;
+    border: 0px solid;
+    font-size: 20px;
+    color: aliceblue;
+    padding: 8%;
+    margin: 10px;
+}
+.send input:hover{
+    transform: scale(1.09);
+}
+.list ul{
+    list-style-type: none;
+}

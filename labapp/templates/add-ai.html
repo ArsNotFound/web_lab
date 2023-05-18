@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main-add-ai.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+        <div class="info">
+            <div class="heading">
+                <p>Поделитесь новыми разработками и мы добавим нейросеть в нашу библиотеку</p>
+            </div>
+        </div>
+        <div class="clearfix">
+            <form id="add-ai">
+                <div class="input-info">
+                    <div class="input-1 name"><input type="text" name="name" placeholder="Название нейросети"></div>
+                    <div class="input-1"><input type="url" name="url" placeholder="Ссылка на нейросеть"></div>
+                </div>
+                <div class="input-info">
+                    <div class="input-2"><textarea name="tasks" placeholder="Задача"></textarea></div>
+                    <div class="input-2"><textarea name="field" placeholder="Сфера"></textarea></div>
+                </div>
+                <div class="input-info">
+                    <div class="input-3"><textarea name="desc" placeholder="Для чего используется нейросеть"></textarea></div>
+                </div>
+                <div class="input-info">
+                    <div class="send"><input type="submit" name="send" value="Отправить"></div>
+                </div>
+
+            </form>
+            <aside>
+                <div class="heading"><h3>Какой нейросетью пользуетесь чаще всего?</h3></div>
+                <div class="list">
+                    <ul>
+                        <li><label><input type="checkbox" name="ChatGPT">ChatGPT</label></li>
+                        <li><label><input type="checkbox" name="Midjourney">Midjourney</label></li>
+                        <li><label><input type="checkbox" name="Dropchat">Dropchat</label></li>
+                        <li><label><input type="checkbox" name="Vizcom">Vizcom</label></li>
+                        <li><label><input type="checkbox" name="Sonix">Sonix</label></li>
+                        <li><label><input type="checkbox" name="Recraft">Recraft</label></li>
+                    </ul>
+                </div>
+                <div class="send"><input type="submit" name="send" value="Отправить"></div>
+                <!-- </div> -->
+            </aside>
+        </div>
+{% endblock %}
+
+{% block foot %}
+<script src="{{ url_for('static', filename='js/add-ai.js') }}"></script>
+{% endblock %}
