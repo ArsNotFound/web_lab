@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/header_styles.css") }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/footer_styles.css") }}" type="text/css"/>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <nav class="nav-header">
+            <div>
+                <a href="/">
+                    <img class="logo" src='{{ url_for('static', filename="img/logo.png") }}' alt='OpenAI_logo'/>
+                </a>
+            </div>
+            <div class="container">
+                <ul class="menu">
+                    {% for item in nav_menu %}
+                        <li class="menu-element {% if item.name == pname %}neuro{% endif %}">
+                            <a href="{{ item.url }}">{{ item.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="add-ai">
+                    <a href="{{ url_for('ai.views.add') }}">Добавить AI</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="heading">
+            <h1>{{ title }}</h1>
+        </div>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-site">
+            <div class="donate">
+                <a href="#">Donate to Boosty.to</a>
+            </div>
+            <div class="menu-logo">
+                <div class="logo">
+                    <a href="https://www.google.ru/?hl=ru">
+                        <img src="{{ url_for('static', filename='img/google.png') }}">
+                    </a>
+                </div>
+                <div class="logo">
+                    <a href="https://twitter.com/">
+                        <img src="{{ url_for('static', filename='img/twitter.png') }}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="{{ url_for('static', filename='js/header.js') }}"></script>
+{% block foot %}{% endblock %}
+</body>
+</html>

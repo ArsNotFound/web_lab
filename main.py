@@ -1,5 +1,5 @@
 # Подключаем приложение Flask из пакета labapp
-from labapp import app
+from app import app
 
 """
 

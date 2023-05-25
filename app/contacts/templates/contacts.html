@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('contacts.views.static', filename="css/main-contacts.css") }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="info">
+        <table align="center">
+            <tr class>
+                <td align="center">
+                    <div>
+                        <div>
+                            <img class="images" src="{{ url_for('contacts.views.static', filename='img/steve_jobs.png') }}"
+                                 alt="Steve Jobs">
+                        </div>
+                        <div><p>ФИ: Мухтаруллин Эльдар</p></div>
+                        <div><p>Период обучения: 2020-2024</p></div>
+                        <div><p>Универститет: УУНИТ</p></div>
+                        <div><p>Место работы: Apple</p></div>
+                        <div><p>Должность: технический директор</p></div>
+                    </div>
+                </td>
+                <td align="center">
+                    <div>
+                        <div>
+                            <img class="images" src="{{ url_for('contacts.views.static', filename='img/steve_voznyak.png') }}"
+                                 alt="Steve Voznyak">
+                        </div>
+                        <div><p>ФИ: Сахапов Арслан</p></div>
+                        <div><p>Период обучения: 2020-2024</p></div>
+                        <div><p>Универститет: УУНИТ</p></div>
+                        <div><p>Место работы: Apple</p></div>
+                        <div><p>Должность: исполнительный директор</p></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div><p>Проекты: iPhone, iPod, homepod, iPad</p></div>
+                </td>
+                <td align="center">
+                    <div><p>Проекты: Macbook, Apple watch, AirPods</p></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div class="contacts">
+                        <div><p>Контакты: 8(917)-777-77-77</p></div>
+                        <div>
+                            <a href="https://vk.com/feed">
+                                <img class="vk logo" src="{{ url_for('static', filename='img/vk.png') }}" alt="VK">
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td align="center">
+                    <div class="contacts">
+                        <div><p>Контакты: 8(918)-888-88-88</p></div>
+                        <div>
+                            <a href="https://vk.com/feed">
+                                <img class="vk logo" src="{{ url_for('static', filename='img/vk.png') }}" alt="VK">
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

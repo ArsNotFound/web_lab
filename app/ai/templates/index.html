@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/main_styles.css") }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="search-box">
+        <div class="search-txt">
+            <input type="text" name="search" placeholder="Введите запрос">
+        </div>
+        <div class="search-txt">
+            <input type="text" name="sphere" placeholder="Сфера">
+        </div>
+        <div class="search-txt">
+            <input type="text" name="sphere" placeholder="Задача">
+        </div>
+        <div class="check">
+            <div>
+                <label>
+                    <input class="check" type="checkbox">
+                    Бесплатные
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox">
+                    Платные
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="sidebars">
+        {% for network in neural_networks %}
+            <div class="sidebar">
+                <div class="img-block">
+                    <a href="{{ url_for('ai.views.neural', slug=network.slug) }}">
+                        <img class="img" src="{{ url_for('ai.views.static', filename=network.img) }}" alt="{{ network.name }}">
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="#">{{ network.category.name }}</a>
+                </div>
+                <div class="subcribe">
+                    <p>
+                        <span>{{ network.name }}</span> — {{ network.short_desc }}
+                    </p>
+                </div>
+                <div class="follow">
+                    <a href="{{ url_for('ai.views.neural', slug=network.slug) }}">Перейти..</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
