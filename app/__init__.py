@@ -1,14 +1,19 @@
 from flask import Flask
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
+from .config import Config
 
 from pydantic import BaseModel
+
+app = Flask(__name__, static_url_path="/static", static_folder="static", template_folder="templates")
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 from app.error import bp as error_bp
 from app.contacts import bp as contacts_bp
 from app.news import bp as news_bp
 from app.ai import bp as ai_bp
-
-
-app = Flask(__name__, static_url_path="/static", static_folder="static", template_folder="templates")
 
 
 class NavigationItem(BaseModel):
