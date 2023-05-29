@@ -1,5 +1,15 @@
 {% extends 'layout.html' %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/404_styles.css") }}" type="text/css"/>
+{% endblock %}
+
 {% block content %}
-    <h1>Not Found</h1>
+    <div class="content">
+    <h3>Ошибка!</h3>
+    <p>Cтраница не найдена. Видимо она не существует, либо указана неверная ссылка</p>
+    <a href = "/">
+        <button>Перейти на главную</button>
+    </a>
+    </div>
 {% endblock %}

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from .config import Config
@@ -14,6 +14,11 @@ from app.error import bp as error_bp
 from app.contacts import bp as contacts_bp
 from app.news import bp as news_bp
 from app.ai import bp as ai_bp
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect(url_for('error.not_found_html'))
 
 
 class NavigationItem(BaseModel):

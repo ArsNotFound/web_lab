@@ -1,12 +1,10 @@
 from flask import Blueprint, jsonify, make_response
 from flask_pydantic import validate
 from pydantic import parse_obj_as
-from pydantic.json import pydantic_encoder
 from sqlalchemy import select
 
-from app.ai.models import NeuralNetworkSchemaIn, NeuralNetwork, NeuralNetworkCategory, NeuralNetworkSchema
-
 from app import db
+from app.ai.models import NeuralNetworkSchemaIn, NeuralNetwork, NeuralNetworkCategory, NeuralNetworkSchema
 
 api_bp = Blueprint('api', __name__)
 
