@@ -56,5 +56,13 @@ CREATE TABLE "user" (
 
 UPDATE alembic_version SET version_num='fb80a3f3cd0e' WHERE alembic_version.version_num = '2361cb0b8cb0';
 
+-- Running upgrade fb80a3f3cd0e -> 5d5b6853bddc
+
+ALTER TABLE neural ADD COLUMN user_id INTEGER;
+
+ALTER TABLE neural ADD FOREIGN KEY(user_id) REFERENCES "user" (id);
+
+UPDATE alembic_version SET version_num='5d5b6853bddc' WHERE alembic_version.version_num = 'fb80a3f3cd0e';
+
 COMMIT;
 

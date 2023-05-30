@@ -40,5 +40,5 @@ form.addEventListener('submit', (event) => {
     })
         .catch(err => console.error(err))
 
-    location.href = '/'
+    //
 });

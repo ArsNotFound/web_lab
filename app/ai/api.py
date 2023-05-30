@@ -1,7 +1,8 @@
-from flask import Blueprint, jsonify, make_response
+from flask import Blueprint, jsonify, make_response, session
 from flask_pydantic import validate
 from pydantic import parse_obj_as
 from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
 
 from app import db
 from app.ai.models import NeuralNetworkSchemaIn, NeuralNetwork, NeuralNetworkCategory, NeuralNetworkSchema
@@ -42,14 +43,19 @@ def create_ai(body: NeuralNetworkSchemaIn):
     d["desc"] = desc_strip
     d["short_desc"] = desc_strip[:100] + "..."
     d["category"] = db.session.scalar(
-        select(NeuralNetworkCategory).where(NeuralNetworkCategory.name == "Без категории"))
+        select(NeuralNetworkCategory).where(NeuralNetworkCategory.name == "Без категории")
+    )
+    d["user_id"] = session.get('user_id')
 
     neural_network = NeuralNetwork(
         **d
     )
 
-    db.session.add(neural_network)
-    db.session.commit()
+    try:
+        db.session.add(neural_network)
+        db.session.commit()
+    except IntegrityError as e:
+        return make_response(jsonify({'msg': str(e)}))
 
     msg = f"Ваш запрос на добавление {body.name} получен!"
     return make_response(jsonify({'msg': msg}))

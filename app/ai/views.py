@@ -15,7 +15,7 @@ views_bp = Blueprint('views', __name__, static_folder='static', template_folder=
 def index():
     neural_networks_db = db.session.scalars(select(NeuralNetwork)).all()
     neural_networks = parse_obj_as(list[NeuralNetworkSchema], neural_networks_db)
-
+    print(neural_networks)
     return render_template('index.html', title='Нейросети', pname='Нейросети', neural_networks=neural_networks)
 
 

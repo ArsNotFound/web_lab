@@ -45,6 +45,11 @@
                     <p>
                         <span>{{ network.name }}</span> — {{ network.short_desc }}
                     </p>
+                    {% if network.added_by %}
+                        <p>
+                            Добавлено: {{ network.added_by.login }}
+                        </p>
+                    {% endif %}
                 </div>
                 <div class="follow">
                     <a href="{{ url_for('ai.views.neural', slug=network.slug) }}">Перейти..</a>

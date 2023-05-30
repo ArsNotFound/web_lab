@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel, validator
 from pydantic.networks import HttpUrl
 from sqlalchemy import String, ForeignKey
@@ -35,6 +37,9 @@ class NeuralNetwork(db.Model):
     desc: Mapped[str]
     url: Mapped[str]
 
+    user_id: Mapped[Optional[int]] = mapped_column(ForeignKey("user.id"))
+    added_by: Mapped[Optional["User"]] = relationship(back_populates="added_networks")
+
 
 class NeuralNetworkSchema(BaseModel):
     name: str
@@ -46,6 +51,7 @@ class NeuralNetworkSchema(BaseModel):
     short_desc: str
     desc: str
     url: HttpUrl
+    added_by: Optional["UserSchema"] = None
 
     @validator('slug', always=True)
     def slug_validator(cls, v, values) -> str:
@@ -64,3 +70,8 @@ class NeuralNetworkSchemaIn(BaseModel):
     tasks: str
     field: str
     desc: str
+
+
+from app.auth.models import User, UserSchema
+
+NeuralNetworkSchema.update_forward_refs()
