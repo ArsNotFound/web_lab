@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "flask-app"
+version = "0.1.0"
+description = ""
+authors = ["Arslan 'ArsNotFound' Sahapov <sahapovaa@uust.ru>"]
+readme = "README.md"
+packages = [{include = "flask_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+bcrypt = "^4.0.1"
+flask = "^2.3.2"
+flask-migrate = "^4.0.4"
+flask-pydantic = "^0.11.0"
+flask-sqlalchemy = "^3.0.3"
+flask-wtf = "^1.1.1"
+psycopg = "^3.1.9"
+pydantic = "^1.10.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
