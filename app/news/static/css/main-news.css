@@ -1,7 +1,8 @@
-main{
+main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.subtitle{
+
+.subtitle {
     display: inline-block;
     font-weight: 900;
     font-size: 30px;
@@ -9,17 +10,20 @@ main{
     cursor: pointer;
     margin-left: 15px;
 }
-.subtitle:hover{
+
+.subtitle:hover {
     transform: scale(1.02);
 }
-.text-block{
+
+.text-block {
     display: none;
     font-size: 18px;
     font-weight: 500;
     padding-right: 10%;
     color: rgb(93, 92, 92);
 }
-.image{
+
+.image {
     transition: 0.3s ease;
     width: 350px;
     margin-top: 35px;

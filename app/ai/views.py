@@ -2,10 +2,10 @@ from flask import render_template, Blueprint
 from pydantic import parse_obj_as
 from sqlalchemy import select
 
-from app.ai.models import NeuralNetworkSchema, NeuralNetwork
-from app.error.views import not_found_html
-
 from app import db
+from app.ai.models import NeuralNetworkSchema, NeuralNetwork
+from app.auth.utils import login_required
+from app.error.views import not_found_html
 
 views_bp = Blueprint('views', __name__, static_folder='static', template_folder='templates',
                      static_url_path='/static/ai')
@@ -20,6 +20,7 @@ def index():
 
 
 @views_bp.route('/ai/add')
+@login_required
 def add():
     return render_template('add-ai.html', title='Добавить AI', pname='Добавить AI')
 

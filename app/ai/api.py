@@ -41,7 +41,8 @@ def create_ai(body: NeuralNetworkSchemaIn):
     d["img"] = "img/logo.png"
     d["desc"] = desc_strip
     d["short_desc"] = desc_strip[:100] + "..."
-    d["category"] = db.session.scalar(select(NeuralNetworkCategory).where(NeuralNetworkCategory.name=="Без категории"))
+    d["category"] = db.session.scalar(
+        select(NeuralNetworkCategory).where(NeuralNetworkCategory.name == "Без категории"))
 
     neural_network = NeuralNetwork(
         **d

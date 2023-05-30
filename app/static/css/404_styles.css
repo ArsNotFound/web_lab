@@ -1,31 +1,37 @@
-*{
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-main{
+
+main {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     gap: 20px;
     width: 35vw;
 }
-h1{
+
+h1 {
     font-size: 220px;
     color: brown;
     margin: 20px;
 }
-h3{
+
+h3 {
     font-size: 40px;
     margin: 20px;
 }
-p{
+
+p {
     font-size: 20px;
 }
-button{
+
+button {
     width: 220px;
     height: 50px;
     background-color: rgb(47, 62, 96);
@@ -34,6 +40,7 @@ button{
     color: white;
     font-weight: bold;
 }
-button:hover{
+
+button:hover {
     transform: scale(1.09);
 }

@@ -1,6 +1,5 @@
 from flask import render_template, Blueprint
 
-
 views_bp = Blueprint('views', __name__, static_folder='static', template_folder='templates')
 
 

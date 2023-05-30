@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 33vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-fields .field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-fields .field input {
+    font-size: 17px;
+    width: 400px;
+    height: 35px;
+    opacity: 0.7
+}
+
+.star {
+    color: red;
+}
+
+.permission {
+    display: flex;
+    align-items: center;
+}
+
+.permission input {
+    height: 30px;
+    width: 30px;
+}
+
+.btn {
+    display: flex;
+    gap: 30px;
+}
+
+.btnlogin {
+    background-color: rgb(26, 70, 249);
+    border: 0px solid;
+    font-size: 17px;
+    color: aliceblue;
+    width: 200px;
+    height: 60px;
+}
+
+.btnsignup {
+    background-color: rgb(18, 169, 4);
+    border: 0px solid;
+    font-size: 17px;
+    color: aliceblue;
+    width: 200px;
+    height: 60px;
+}
+
+.animation:hover {
+    transform: scale(1.09);
+}
+
+label[required]:after {
+    content: " *";
+    color: red;
+}
+
+.warning {
+    color: red;
+}

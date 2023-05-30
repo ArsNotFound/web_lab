@@ -7,7 +7,8 @@
 {% block content %}
     <div class="content-sidebar">
         <div class="content">
-            <div><img class="gif" src="{{ url_for('ai.views.static', filename=network.img) }}" alt="{{ network.name }}"></div>
+            <div><img class="gif" src="{{ url_for('ai.views.static', filename=network.img) }}" alt="{{ network.name }}">
+            </div>
             <div class="category"><a href="#">{{ network.category.name }}</a></div>
             <div class="info"><p><span>Задача:</span> {{ network.tasks }}</p></div>
             <div class="info"><p><span>Сфера:</span> {{ network.field }}</p></div>

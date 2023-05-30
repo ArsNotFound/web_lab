@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('auth.views.static', filename='css/login_styles.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="conteiner">
+            <form method="POST">
+                <div class="input-fields">
+                    {% for field in form %}
+                        {% if field.type == 'CSRFTokenField' %}
+                            {{ field }}
+
+                            {% if field.errors %}
+                                <div class="warning">You have submitted an invalid CSRF token</div>
+                            {% endif %}
+
+                        {% elif field.type == 'HiddenField' %}
+                            {{ field }}
+                        {% else %}
+                            <div class="field">
+                                {{ field.label(required=field.flags.required) }}
+                                {{ field }}
+                                {% if field.errors %}
+                                    <div class="warning">{{ field.errors[0] }}</div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="btn">
+                        <div>
+                            <button class="btnlogin animation" type="button" onclick="location.href='/login'"
+                                    name="login">Уже зарегистрированы?
+                            </button>
+                        </div>
+                        <div>
+                            <button class="btnsignup animation" type="submit" name="signup">Зарегистрироваться</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

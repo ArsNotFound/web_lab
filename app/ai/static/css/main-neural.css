@@ -1,24 +1,29 @@
-body{
+body {
     margin: 0;
 }
-main{
+
+main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.content{
+
+.content {
     margin-left: 3%;
     width: 50%;
 }
-.heading{
+
+.heading {
     display: flex;
     justify-content: center;
 }
-.heading h2{
-    font-weight:bold;
+
+.heading h2 {
+    font-weight: bold;
     font-size: 40px;
     color: rgb(220, 139, 9);
     margin-bottom: 0px;
 }
-.category{
+
+.category {
     margin-top: 10px;
     background-color: rgb(220, 139, 9);
     width: 150px;
@@ -28,24 +33,29 @@ main{
     justify-content: center;
     align-items: center;
 }
-.category a{
+
+.category a {
     text-decoration: none;
     color: white;
 }
-.category:hover{
+
+.category:hover {
     transform: scale(1.09);
 }
-.info p{
+
+.info p {
     font-size: 18px;
 }
 
-.info p span{
+.info p span {
     font-weight: bold;
 }
-.gif{
+
+.gif {
     width: 700px;
 }
-.follow{
+
+.follow {
     margin-top: 10px;
     background-color: rgb(11, 179, 45);
     width: 150px;
@@ -55,38 +65,46 @@ main{
     justify-content: center;
     align-items: center;
 }
-.follow a{
+
+.follow a {
     text-decoration: none;
     color: white;
 }
-.follow:hover{
+
+.follow:hover {
     transform: scale(1.09);
 }
-.vk{
+
+.vk {
     width: 100px;
 }
-.vk:hover{
+
+.vk:hover {
     transform: scale(1.09);
 }
-.share{
+
+.share {
     margin-top: 10%;
     display: flex;
     align-items: center;
 }
-.share p{
+
+.share p {
     font-size: 18px;
     font-weight: bold;
 }
-.content-sidebar{
+
+.content-sidebar {
     margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
 }
-.sidebar{
+
+.sidebar {
     float: left;
     margin-left: 5%;
     width: 40%;
-    height: 100%; 
+    height: 100%;
     border: 1px solid rgb(128, 127, 127);
     background-image: url("D:\\My_files\\ТЗ по вебу\\Лаба 1\\www\\images\\lp-logo-3.jpg");
     border-radius: 20px;
@@ -95,8 +113,9 @@ main{
     flex-direction: column;
     align-items: center;
 }
-.send input{
-    background-color:rgb(220, 139, 9);
+
+.send input {
+    background-color: rgb(220, 139, 9);
     border-radius: 20px;
     border: 0px solid;
     font-size: 20px;
@@ -104,9 +123,11 @@ main{
     padding: 8%;
     margin: 10px;
 }
-.send input:hover{
+
+.send input:hover {
     transform: scale(1.09);
 }
-.list ul{
+
+.list ul {
     list-style-type: none;
 }

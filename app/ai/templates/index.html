@@ -34,7 +34,8 @@
             <div class="sidebar">
                 <div class="img-block">
                     <a href="{{ url_for('ai.views.neural', slug=network.slug) }}">
-                        <img class="img" src="{{ url_for('ai.views.static', filename=network.img) }}" alt="{{ network.name }}">
+                        <img class="img" src="{{ url_for('ai.views.static', filename=network.img) }}"
+                             alt="{{ network.name }}">
                     </a>
                 </div>
                 <div class="info">

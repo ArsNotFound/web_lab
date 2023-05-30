@@ -1,7 +1,8 @@
 {% extends 'layout.html' %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('contacts.views.static', filename="css/main-contacts.css") }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ url_for('contacts.views.static', filename="css/main-contacts.css") }}"
+          type="text/css"/>
 {% endblock %}
 
 {% block content %}
@@ -11,7 +12,8 @@
                 <td align="center">
                     <div>
                         <div>
-                            <img class="images" src="{{ url_for('contacts.views.static', filename='img/steve_jobs.png') }}"
+                            <img class="images"
+                                 src="{{ url_for('contacts.views.static', filename='img/steve_jobs.png') }}"
                                  alt="Steve Jobs">
                         </div>
                         <div><p>ФИ: Мухтаруллин Эльдар</p></div>
@@ -24,7 +26,8 @@
                 <td align="center">
                     <div>
                         <div>
-                            <img class="images" src="{{ url_for('contacts.views.static', filename='img/steve_voznyak.png') }}"
+                            <img class="images"
+                                 src="{{ url_for('contacts.views.static', filename='img/steve_voznyak.png') }}"
                                  alt="Steve Voznyak">
                         </div>
                         <div><p>ФИ: Сахапов Арслан</p></div>

@@ -1,9 +1,9 @@
 from flask import Flask, redirect, url_for
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from .config import Config
-
 from pydantic import BaseModel
+
+from .config import Config
 
 app = Flask(__name__, static_url_path="/static", static_folder="static", template_folder="templates")
 app.config.from_object(Config)
@@ -14,6 +14,7 @@ from app.error import bp as error_bp
 from app.contacts import bp as contacts_bp
 from app.news import bp as news_bp
 from app.ai import bp as ai_bp
+from app.auth import bp as auth_bp
 
 
 @app.errorhandler(404)
@@ -44,3 +45,4 @@ app.register_blueprint(contacts_bp)
 app.register_blueprint(news_bp)
 app.register_blueprint(error_bp, url_prefix='/error')
 app.register_blueprint(ai_bp)
+app.register_blueprint(auth_bp)

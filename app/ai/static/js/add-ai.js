@@ -7,7 +7,7 @@ form.addEventListener('submit', (event) => {
     let taskValue = form.elements['tasks'].value;
     let fieldValue = form.elements['field'].value;
     let descValue = form.elements['desc'].value;
-    
+
     if (!nameValue || !urlValue || !taskValue || !fieldValue || !descValue) {
         alert('Введите данные');
         return;
@@ -39,4 +39,6 @@ form.addEventListener('submit', (event) => {
         }
     })
         .catch(err => console.error(err))
+
+    location.href = '/'
 });

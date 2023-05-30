@@ -1,6 +1,6 @@
 from flask import render_template, Blueprint
-from sqlalchemy import select
 from pydantic import parse_obj_as
+from sqlalchemy import select
 
 from app import db
 from app.news.models import News, NewsSchema
