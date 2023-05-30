@@ -30,5 +30,31 @@ CREATE TABLE neural (
 
 INSERT INTO alembic_version (version_num) VALUES ('0a2195c73602') RETURNING alembic_version.version_num;
 
+-- Running upgrade 0a2195c73602 -> 2361cb0b8cb0
+
+CREATE TABLE news (
+    id SERIAL NOT NULL, 
+    name VARCHAR NOT NULL, 
+    text VARCHAR NOT NULL, 
+    img VARCHAR NOT NULL, 
+    PRIMARY KEY (id)
+);
+
+UPDATE alembic_version SET version_num='2361cb0b8cb0' WHERE alembic_version.version_num = '0a2195c73602';
+
+-- Running upgrade 2361cb0b8cb0 -> fb80a3f3cd0e
+
+CREATE TABLE "user" (
+    id SERIAL NOT NULL, 
+    login VARCHAR NOT NULL, 
+    password_hash BYTEA NOT NULL, 
+    email VARCHAR NOT NULL, 
+    PRIMARY KEY (id), 
+    UNIQUE (email), 
+    UNIQUE (login)
+);
+
+UPDATE alembic_version SET version_num='fb80a3f3cd0e' WHERE alembic_version.version_num = '2361cb0b8cb0';
+
 COMMIT;
 
